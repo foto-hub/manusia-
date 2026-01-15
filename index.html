@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Lobby Website</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    min-height: 100vh;
+    color: white;
+}
+
+.header {
+    text-align: center;
+    padding: 30px;
+}
+
+.lobby {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.4);
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+    </style>
+    <script>
+        function joinRoom(roomName) {
+    alert("Kamu bergabung ke " + roomName);
+}
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Lobby Website</h1>
+        <p>Selamat datang, pilih menu atau room</p>
+    </header>
+
+    <main class="lobby">
+        <div class="card">
+            <h2>Room 1</h2>
+            <p>Pemain: 2 / 4</p>
+            <button onclick="joinRoom('Room 1')">Join</button>
+        </div>
+
+        <div class="card">
+            <h2>Room 2</h2>
+            <p>Pemain: 1 / 4</p>
+            <button onclick="joinRoom('Room 2')">Join</button>
+        </div>
+
+        <div class="card">
+            <h2>Room 3</h2>
+            <p>Pemain: 4 / 4</p>
+            <button disabled>Penuh</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
